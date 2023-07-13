@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Major+Mono+Display&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@keyframes yippee {
+  0% {
+    background-color: hotpink;
+  }
+  25% {
+    background-color: blueviolet;
+  }
+  50% {
+    background-color: deepskyblue;
+  }
+  75% {
+    background-color: blueviolet;
+  }
+  100% {
+    background-color: hotpink;
+  }
+}
+body {
+  color: white;
+  animation-name: yippee;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  text-align: center;
+  font-family: DotGothic16, "Times New Roman", Arial;
+  font: DotGothic16;
+  text-shadow: 1px 1px 0px black;
+}
+h1 {
+  letter-spacing: 15px;
+  text-decoration: underline overline;
+  text-decoration-style: double;
+}
+.maxwell {
+  max-block-size: 200px;
+  border-radius: 25%;
+  image-rendering: pixelated;
+  filter: drop-shadow(2px 2px 0px black);
+}
+.maxwell:hover {
+  max-block-size: 200px;
+  border-radius: 25%;
+  image-rendering: pixelated;
+  filter: hue-rotate(270deg) saturate(4) drop-shadow(2px 2px 0px black);
+}
+button {
+  background-color: lightcoral;
+  border-top: 2px solid pink;
+  border-left: 2px solid pink;
+  border-right: 2px solid palevioletred;
+  border-bottom: 2px solid palevioletred;
+  font-family: DotGothic16, "Times New Roman", Arial;
+  font: DotGothic16;
+  text-align: top;
+  color: white;
+  font-family: DotGothic16, "Times New Roman", Arial;
+  font: DotGothic16;
+  text-shadow: 1px 1px 0px black;
+  letter-spacing: 5px;
+}
+button:active {
+  background-color: coral;
+  border-top: 2px solid palevioletred;
+  border-left: 2px solid palevioletred;
+  border-right: 2px solid pink;
+  border-bottom: 2px solid pink;
+  font-family: DotGothic16, "Times New Roman", Arial;
+  font: DotGothic16;
+  text-align: top;
+  color: white;
+  font-family: DotGothic16, "Times New Roman", Arial;
+  font: DotGothic16;
+  text-shadow: 1px 1px 0px black;
+  letter-spacing: 5px;
+}
