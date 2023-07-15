@@ -18,10 +18,13 @@
 }
 @keyframes slide {
   0% {
-    right: 100%;
+    right: 35%;
+  }
+  50% {
+    right: -35%;
   }
   100% {
-    right: -100%;
+    right: 35%;
   }
 }
 @keyframes whee {
