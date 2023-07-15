@@ -16,6 +16,26 @@
     background-color: hotpink;
   }
 }
+@keyframes slide {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: -100%;
+  }
+}
+@keyframes whee {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+    rotate: 180deg;
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
 body {
   color: white;
   animation-name: yippee;
@@ -72,4 +92,28 @@ button:active {
   font: DotGothic16;
   text-shadow: 1px 1px 0px black;
   letter-spacing: 5px;
+}
+.silly {
+  max-block-size: 200px;
+  border-radius: 25%;
+  image-rendering: pixelated;
+  position: relative;
+  filter: drop-shadow(2px 2px 0px black);
+  animation-name: slide;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  overflow: hidden;
+}
+.plant {
+  max-block-size: 200px;
+  image-rendering: pixelated;
+  position: relative;
+}
+.plant:active {
+  max-block-size: 200px;
+  image-rendering: pixelated;
+  position: relative;
+  animation-name: whee;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
 }
