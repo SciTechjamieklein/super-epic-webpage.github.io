@@ -48,7 +48,7 @@ body {
   font-family: DotGothic16, "Times New Roman", Arial;
   font: DotGothic16;
   text-shadow: 1px 1px 0px black;
-  cursor: url(cursorwhee.png);
+  cursor: url(cursorwhee.png),auto;
 }
 h1 {
   letter-spacing: 15px;
@@ -126,6 +126,8 @@ button:active {
   position: relative;
   box-sizing: content-box;
   overflow-wrap: break-word;
+  image-rendering: pixelated;
+  filter: drop-shadow(2px 2px 0px black);
 }
 .popboxi {
   max-block-size: 200px;
