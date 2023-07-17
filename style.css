@@ -125,11 +125,11 @@ button:active {
   position: relative;
   box-sizing: content-box;
   overflow-wrap: break-word;
-  image-rendering: pixelated;
 }
 .popboxi {
   max-block-size: 200px;
   filter: drop-shadow(2px 2px 0px black);
+  image-rendering: pixelated;
 }
 .topofbox {
   position: absolute;
