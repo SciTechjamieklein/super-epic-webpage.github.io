@@ -18,13 +18,13 @@
 }
 @keyframes slide {
   0% {
-    right: 30%;
+    right: 35%;
   }
   50% {
-    right: -30%;
+    right: -35%;
   }
   100% {
-    right: 30%;
+    right: 35%;
   }
 }
 @keyframes whee {
@@ -48,6 +48,7 @@ body {
   font-family: DotGothic16, "Times New Roman", Arial;
   font: DotGothic16;
   text-shadow: 1px 1px 0px black;
+  cursor: url(cursorwhee.png);
 }
 h1 {
   letter-spacing: 15px;
@@ -119,4 +120,30 @@ button:active {
   animation-name: whee;
   animation-iteration-count: infinite;
   animation-duration: 1s;
+}
+.popbox {
+  text-align: center;
+  position: relative;
+  box-sizing: content-box;
+  overflow-wrap: break-word;
+}
+.popboxi {
+  max-block-size: 200px;
+}
+.topofbox {
+  position: absolute;
+  top: 8px;
+  left: 40%;
+  letter-spacing: 15px;
+}
+.centerofbox {
+  max-width: 264px;
+  max-height: 112px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: inherit;
+  color: black;
+  text-shadow: 1px 1px 0px white;
 }
