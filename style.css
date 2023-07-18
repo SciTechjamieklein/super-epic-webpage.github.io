@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Major+Mono+Display&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 @keyframes yippee {
   0% {
     background-color: hotpink;
@@ -48,6 +49,7 @@ body {
   font-family: DotGothic16, "Times New Roman", Arial;
   font: DotGothic16;
   text-shadow: 1px 1px 0px black;
+  cursor: url(cursorwhee.png);
 }
 h1 {
   letter-spacing: 15px;
@@ -128,9 +130,6 @@ button:active {
 }
 .popboxi {
   max-block-size: 200px;
-  filter: drop-shadow(2px 2px 0px black);
-  image-rendering: pixelated;
-  z-index:-1;
 }
 .topofbox {
   position: absolute;
@@ -148,4 +147,23 @@ button:active {
   box-sizing: inherit;
   color: black;
   text-shadow: 1px 1px 0px white;
+}
+.shop {
+  text-align: center;
+  background-color: blue;
+  width: 500px;
+  filter: drop-shadow(2px 2px 0px black);
+  box-sizing: content-box;
+}
+.potato {
+}
+.potato:hover {
+  filter: drop-shadow(1px 1px 0px black);
+}
+.inventory {
+  right: 10%;
+  padding-left: 30px;
+  padding-right: 30px;
+  max-width: 300px;
+  background-image: linear-gradient(pink, cyan);
 }
