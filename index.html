@@ -17,7 +17,9 @@ function yoy() {
     alert("...you can stop now... you have...100 yippees.");
     ah = "yippee = " + yam;
   }
-  document.getElementById("yoy").innerHTML = ah;
+  localStorage.setItem("ycount", yam);
+  document.getElementById("yoy").innerHTML =
+    "yippee = " + localStorage.getItem("ycount");
 }
 function convert() {
   if (confirm("convert 2 yippees to 1 icy?")) {
@@ -76,12 +78,18 @@ function buyPo() {
   document.getElementById("buyPo").innerHTML = pota;
   document.getElementById("convert").innerHTML = txt;
 }
-console.log("hi there. are you gonna cheat and give yourself yippees or icy or potato?");
+console.log(
+  "hi there. are you gonna cheat and give yourself yippees or icy or potato?"
+);
 console.log("that is fine with me! :3");
-console.log("have fun in Inspect! if you want, you can look at my mess of code while youre here.");
+console.log(
+  "have fun in Inspect! if you want, you can look at my mess of code while youre here."
+);
+
 </script>
-<h1>super epic webpage</h1>
-<h2>scroll down and find fun things!</h2><br><br><br><br>
+<h1>super epic webpage experimental</h1>
+<h2>scroll down and find fun things!</h2><br>
+<br><br><br>
 <div class="popbox">
   <div class="topofbox">warning:</div>
   <img src="https://art.pixilart.com/sr2b532a56d320f.png" alt="pixel art style pop up box" class="popboxi" />
@@ -110,5 +118,5 @@ console.log("have fun in Inspect! if you want, you can look at my mess of code w
   <p>(spend all your hard earned icy)</p>
   <img src="https://art.pixilart.com/sr267d4368f89c0.png" id="potato" alt="potato" class="potato" height="32" onclick="buyPo()">
 </div>
-<p>this is the end of the webpage as we know it (and i feel fine). i will add more stuff later.</p>
+<p>this is the end of the webpage as we know it (and i feel fine). i will add more stuff later. also if this is a bit broken, it's because i am adding a save function dependent on wild magic and i only had the motivation to impliment it for yippee amounts.</p>
 </html>
