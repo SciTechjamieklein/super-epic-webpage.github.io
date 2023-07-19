@@ -37,8 +37,7 @@ var txt;
 function yoy() {
   yam++;
   localStorage.setItem("ycount", yam);
-  document.getElementById("yoy").innerHTML =
-    "yippee = " + localStorage.getItem("ycount");
+  document.getElementById("yoy").innerHTML ="yippee = " + localStorage.getItem("ycount");
   if (yam != 100) {
     alert(
       "yippee" + " you have " + localStorage.getItem("ycount") + " yippees"
