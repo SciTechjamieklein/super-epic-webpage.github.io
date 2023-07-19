@@ -32,6 +32,9 @@ function yoy() {
   yam++;
   localStorage.setItem("ycount", yam);
   document.getElementById("yoy").innerHTML ="yippee = " + localStorage.getItem("ycount");
+  if (yam == null){
+    yam=0;             //if this stops working i will actually scream
+  }
   if (yam != 100) {
     alert(
       "yippee" + " you have " + localStorage.getItem("ycount") + " yippees"
@@ -121,7 +124,8 @@ function buyPo() {
   document.getElementById("buyPo").innerHTML = pota;
   document.getElementById("convert").innerHTML = txt;
 }
-  document.getElementById("yoy").innerHTML ="yippee = " + localStorage.getItem("ycount");            //behold my failure of a failsafe
+  document.getElementById("yoy").innerHTML =
+    "yippee = " + localStorage.getItem("ycount");            
   document.getElementById("convert").innerHTML =
     "icy = " + localStorage.getItem("icount");
   document.getElementById("buyPo").innerHTML =
