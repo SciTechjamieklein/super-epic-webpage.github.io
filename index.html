@@ -56,6 +56,9 @@ function yoy() {
 }
 function convert() {
   if (confirm("convert 2 yippees to 1 icy?")) {
+    if (icy == null){
+      icy=0;
+    }
     if (yam >= 2) {
       yam = yam - 2;
       icy++;
