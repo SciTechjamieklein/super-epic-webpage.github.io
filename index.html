@@ -3,47 +3,89 @@
 <title>super epic webpage</title>
 <link rel="stylesheet" href="/super-epic-webpage.github.io/style.css">
 <link rel="icon" href="/super-epic-webpage.github.io/iconic.png">
-<script>let yam = 0;
-let icy = 0;
-let ponum = 0;
+<script>if (localStorage.getItem("ycount") == null) {
+  let yam = 0;
+  localStorage.setItem("ycount", yam);
+} else {
+  localStorage.getItem("ycount");
+  yam = localStorage.getItem("ycount");
+  document.getElementById("yoy").innerHTML =
+    "yippee = " + localStorage.getItem("ycount");
+}
+//my code is a surreal nightmare. even i have no idea of whats going on.
+//IT WORKS!!! IT WORKS!!!
+if (localStorage.getItem("icount") == null) {
+  let icy = 0;
+  localStorage.setItem("icount", icy);
+} else {
+  localStorage.getItem("icount");
+  icy = localStorage.getItem("icount");
+  document.getElementById("convert").innerHTML =
+    "icy = " + localStorage.getItem("icount");
+}
+if (localStorage.getItem("pcount") == null) {
+  let ponum = 0;
+  localStorage.setItem("pcount", ponum);
+} else {
+  localStorage.getItem("pcount");
+  yam = localStorage.getItem("pcount");
+  document.getElementById("buyPo").innerHTML =
+    "potato = " + localStorage.getItem("pcount");
+}
 var ah;
 var txt;
 function yoy() {
   yam++;
-  if (yam != 100) {
-    alert("yippee" + " you have " + yam + " yippees");
-    ah = "yippee = " + yam;
-  } else {
-    alert("...you can stop now... you have...100 yippees.");
-    ah = "yippee = " + yam;
-  }
   localStorage.setItem("ycount", yam);
   document.getElementById("yoy").innerHTML =
     "yippee = " + localStorage.getItem("ycount");
+  if (yam != 100) {
+    alert(
+      "yippee" + " you have " + localStorage.getItem("ycount") + " yippees"
+    );
+    document.getElementById("yoy").innerHTML =
+      "yippee = " + localStorage.getItem("ycount");
+  } else {
+    alert("...you can stop now... you have...100 yippees.");
+    document.getElementById("yoy").innerHTML =
+      "yippee = " + localStorage.getItem("ycount");
+  }
+  document.getElementById("yoy").innerHTML =
+    "yippee = " + localStorage.getItem("ycount");
+  console.log(yam + " yam");
+  console.log(localStorage.getItem("ycount") + " storage");
 }
 function convert() {
   if (confirm("convert 2 yippees to 1 icy?")) {
     if (yam >= 2) {
       yam = yam - 2;
       icy++;
-      txt = "icy count = " + icy;
+      localStorage.setItem("icount", icy);
+      txt = "icy = " + localStorage.getItem("icount");
       ah = "yippee = " + yam;
+      localStorage.setItem("ycount", yam);
     } else {
       alert("you do not have enough yippees...");
       if (icy > 0) {
-        txt = "icy count = " + icy;
+        localStorage.setItem("icount", icy);
+        txt = "icy = " + localStorage.getItem("icount");
         ah = "yippee = " + yam;
       } else {
-        txt = ":[";
+        localStorage.setItem("icount", icy);
+        txt = "icy = " + localStorage.getItem("icount");
+        ah = "yippee = " + yam;
       }
     }
   } else {
     alert("...");
     if (icy > 0) {
-      txt = "icy count = " + icy;
+      localStorage.setItem("icount", icy);
+      txt = "icy = " + localStorage.getItem("icount");
       ah = "yippee = " + yam;
     } else {
-      txt = "icy count = " + icy;
+      localStorage.setItem("icount", icy);
+      txt = "icy = " + localStorage.getItem("icount");
+      ah = "yippee = " + yam;
     }
   }
   document.getElementById("yoy").innerHTML = ah;
@@ -54,25 +96,29 @@ function buyPo() {
   if (confirm("buy a potato for 1 icy?")) {
     if (icy >= 1) {
       --icy;
+      localStorage.setItem("icount", icy);
       ponum++;
-      txt = "icy = " + icy;
-      pota = "potato = " + ponum;
+      localStorage.setItem("pcount", ponum);
+      pota = "potato = " + localStorage.getItem("pcount");
+      txt = "icy = " + localStorage.getItem("icount");
     } else {
       alert("you do not have enough icy...");
       if (icy > 0) {
-        pota = "potato = " + ponum;
-        txt = "icy = " + icy;
+        pota = "potato = " + localStorage.getItem("pcount");
+        txt = "icy = " + localStorage.getItem("icount");
       } else {
-        txt = "icy = " + icy;
-        pota = "...";
+        pota = "potato = " + localStorage.getItem("pcount");
+        txt = "icy = " + localStorage.getItem("icount");
       }
     }
   } else {
     alert("...");
     if (pota > 0) {
-      pota = "potato = " + ponum;
+      pota = "potato = " + localStorage.getItem("pcount");
+      txt = "icy = " + localStorage.getItem("icount");
     } else {
-      pota = "...";
+      pota = "potato = " + localStorage.getItem("pcount");
+      txt = "icy = " + localStorage.getItem("icount");
     }
   }
   document.getElementById("buyPo").innerHTML = pota;
@@ -85,9 +131,15 @@ console.log("that is fine with me! :3");
 console.log(
   "have fun in Inspect! if you want, you can look at my mess of code while youre here."
 );
+function erase() {
+  if (confirm("are you sure you want to clear all of your progress?")) {
+    localStorage.clear();
+    location.reload();
+  }
+}
 
 </script>
-<h1>super epic webpage experimental</h1>
+<h1>super epic webpage</h1>
 <h2>scroll down and find fun things!</h2><br>
 <br><br><br>
 <div class="popbox">
@@ -106,8 +158,8 @@ console.log(
 <img src="https://art.pixilart.com/sr26a5ab64108af.png" alt="garden" class="plant">
 <div class="inventory">
   <h2>your inventory:</h2>
-  <p id="convert"></p>
   <p id="yoy"></p>
+  <p id="convert"></p>
   <p id="buyPo"></p>
 </div>
 <br>
@@ -118,5 +170,6 @@ console.log(
   <p>(spend all your hard earned icy)</p>
   <img src="https://art.pixilart.com/sr267d4368f89c0.png" id="potato" alt="potato" class="potato" height="32" onclick="buyPo()">
 </div>
+<button onclick="erase()">clear all progress</button>
 <p>this is the end of the webpage as we know it (and i feel fine). i will add more stuff later. also if this is a bit broken, it's because i am adding a save function dependent on wild magic and i only had the motivation to impliment it for yippee amounts.</p>
 </html>
