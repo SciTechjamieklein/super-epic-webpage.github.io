@@ -63,6 +63,10 @@ function convert() {
       localStorage.setItem("ycount", yam);
       txt = "icy = " + icy;
       ah = "yippee = " + yam;
+      document.getElementById("yoy").innerHTML =
+    ah;       
+  document.getElementById("convert").innerHTML =
+    txt;
     } else {
       alert("you do not have enough yippees...");
       if (icy > 0) {
@@ -101,6 +105,12 @@ function buyPo() {
       localStorage.setItem("pcount", ponum);
       pota = "potato = " + localStorage.getItem("pcount");
       txt = "icy = " + localStorage.getItem("icount");
+      document.getElementById("yoy").innerHTML =
+    ah;           
+  document.getElementById("convert").innerHTML =
+    txt;
+  document.getElementById("buyPo").innerHTML =
+    pota;
     } else {
       alert("you do not have enough icy...");
       if (icy > 0) {
@@ -121,15 +131,10 @@ function buyPo() {
       txt = "icy = " + localStorage.getItem("icount");
     }
   }
+  document.getElementById("yoy").innerHTML = ah;
   document.getElementById("buyPo").innerHTML = pota;
   document.getElementById("convert").innerHTML = txt;
 }
-  document.getElementById("yoy").innerHTML =
-    "yippee = " + localStorage.getItem("ycount");            
-  document.getElementById("convert").innerHTML =
-    "icy = " + localStorage.getItem("icount");
-  document.getElementById("buyPo").innerHTML =
-    "potato = " + localStorage.getItem("pcount");
 console.log(
   "hi there. are you gonna cheat and give yourself yippees or icy or potato?"
 );
