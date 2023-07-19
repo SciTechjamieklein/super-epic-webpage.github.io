@@ -103,8 +103,8 @@ function buyPo() {
       localStorage.setItem("icount", icy);
       ponum++;
       localStorage.setItem("pcount", ponum);
-      pota = "potato = " + localStorage.getItem("pcount");
-      txt = "icy = " + localStorage.getItem("icount");
+      pota = "potato = " + ponum;
+      txt = "icy = " + icy;
       document.getElementById("yoy").innerHTML =
     ah;           
   document.getElementById("convert").innerHTML =
@@ -114,21 +114,46 @@ function buyPo() {
     } else {
       alert("you do not have enough icy...");
       if (icy > 0) {
-        pota = "potato = " + localStorage.getItem("pcount");
-        txt = "icy = " + localStorage.getItem("icount");
+        pota = "potato = " + ponum;
+        txt = "icy = " + icy;
+        ocument.getElementById("yoy").innerHTML =
+    ah;           
+  document.getElementById("convert").innerHTML =
+    txt;
+  document.getElementById("buyPo").innerHTML =
+    pota;
       } else {
-        pota = "potato = " + localStorage.getItem("pcount");
-        txt = "icy = " + localStorage.getItem("icount");
+        pota = "potato = " + ponum;
+        txt = "icy = " + icy;
+        ocument.getElementById("yoy").innerHTML =
+    ah;           
+  document.getElementById("convert").innerHTML =
+    txt;
+  document.getElementById("buyPo").innerHTML =
+    pota;
       }
     }
   } else {
     alert("...");
     if (pota > 0) {
-      pota = "potato = " + localStorage.getItem("pcount");
-      txt = "icy = " + localStorage.getItem("icount");
+      pota = "potato = " + ponum;
+      txt = "icy = " + icy;
+      ocument.getElementById("yoy").innerHTML =
+    ah;           
+  document.getElementById("convert").innerHTML =
+    txt;
+  document.getElementById("buyPo").innerHTML =
+    pota;
     } else {
-      pota = "potato = " + localStorage.getItem("pcount");
-      txt = "icy = " + localStorage.getItem("icount");
+      pota = "potato = " + ponum;
+      txt = "icy = " + icy;
+      localStorage.setItem("pcount", ponum);
+      ocument.getElementById("yoy").innerHTML =
+    ah;           
+  document.getElementById("convert").innerHTML =
+    txt;
+  document.getElementById("buyPo").innerHTML =
+    pota;
     }
   }
   document.getElementById("yoy").innerHTML = ah;
