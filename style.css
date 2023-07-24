@@ -127,6 +127,7 @@ button:active {
   position: relative;
   box-sizing: content-box;
   overflow-wrap: break-word;
+  filter: drop-shadow(0px 0px 5px white);
 }
 .popboxi {
   max-block-size: 200px;
@@ -146,12 +147,16 @@ button:active {
   transform: translate(-50%, -50%);
   box-sizing: inherit;
   color: black;
+  font-size:15px;
   text-shadow: 1px 1px 0px white;
 }
 .shop {
   text-align: center;
+  position: static;
   background-color: blue;
-  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
   filter: drop-shadow(2px 2px 0px black);
   box-sizing: content-box;
 }
@@ -161,9 +166,10 @@ button:active {
   filter: drop-shadow(1px 1px 0px black);
 }
 .inventory {
-  right: 10%;
-  padding-left: 30px;
-  padding-right: 30px;
-  max-width: 300px;
-  background-image: linear-gradient(pink, cyan);
+  position: static;
+  background-image: linear-gradient(blue, cyan, blue);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+  filter: drop-shadow(2px 2px 0px black);
 }
