@@ -85,7 +85,7 @@ body {
 .accessib {
   color: white;
   animation-name: access;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
   animation-duration: 30s;
   text-align: center;
   font-family: DotGothic16, "Times New Roman", Arial;
