@@ -21,11 +21,13 @@
     background-image: url("https://art.pixilart.com/sr2b53566ca1caws3.png");
     background-size: 64px 64px;
     backdrop-filter: brightness(15%);
+    -webkit-backdrop-filter: brightness(15%);
   }
   to {
     background-image: url("https://art.pixilart.com/sr2b53566ca1caws3.png");
     background-size: 64px 64px;
     backdrop-filter: brightness(15%);
+    -webkit-backdrop-filter:brightness(15%);
   }
 }
 @keyframes slide {
