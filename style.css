@@ -80,7 +80,7 @@ body {
   font-family: DotGothic16, "Times New Roman", Arial;
   font: DotGothic16;
   text-shadow: 1px 1px 0px black;
-  cursor: url(/img/cursorwhee.png);
+  cursor: url('/img/cursorwhee.png');
 }
 .accessib {
   color: white;
@@ -91,7 +91,7 @@ body {
   font-family: DotGothic16, "Times New Roman", Arial;
   font: DotGothic16;
   text-shadow: 1px 1px 0px black;
-  cursor: url(/img/cursorwhee.png);
+  cursor: url('/img/cursorwhee.png');
 }
 h1 {
   letter-spacing: 15px;
