@@ -17,6 +17,18 @@
     background-color: hotpink;
   }
 }
+@keyframes access {
+  from {
+    background-image: url("https://art.pixilart.com/sr2b53566ca1caws3.png");
+    background-size: 64px 64px;
+    backdrop-filter: brightness(15%);
+  }
+  to {
+    background-image: url("https://art.pixilart.com/sr2b53566ca1caws3.png");
+    background-size: 64px 64px;
+    backdrop-filter: brightness(15%);
+  }
+}
 @keyframes slide {
   0% {
     right: 35%;
@@ -40,6 +52,26 @@
     rotate: 360deg;
   }
 }
+@keyframes noFlip{
+  0% {
+  }
+  50% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+  }
+}
+@keyframes less {
+  0% {
+    right: 25%;
+  }
+  50% {
+    right: -25%;
+  }
+  100% {
+    right: 25%;
+  }
+}
 body {
   color: white;
   animation-name: yippee;
@@ -51,10 +83,22 @@ body {
   text-shadow: 1px 1px 0px black;
   cursor: url(cursorwhee.png);
 }
+.accessib {
+  color: white;
+  animation-name: access;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  text-align: center;
+  font-family: DotGothic16, "Times New Roman", Arial;
+  font: DotGothic16;
+  text-shadow: 1px 1px 0px black;
+  cursor: url(cursorwhee.png);
+}
 h1 {
   letter-spacing: 15px;
-  text-decoration: underline overline;
-  text-decoration-style: double;
+  border: 4px solid transparent;
+  border-image: url("https://art.pixilart.com/sr239a6b22d1faws3.png") 100 round;
+  border-
 }
 .maxwell {
   max-block-size: 200px;
@@ -109,6 +153,19 @@ button:active {
   animation-duration: 10s;
   overflow: hidden;
 }
+@media (prefers-reduced-motion) {
+  .silly {
+    max-block-size: 200px;
+    border-radius: 25%;
+    image-rendering: pixelated;
+    position: relative;
+    filter: drop-shadow(2px 2px 0px black);
+    animation-name: less;
+    animation-iteration-count: infinite;
+    animation-duration: 120s;
+    overflow: hidden;
+  }
+}
 .plant {
   max-block-size: 200px;
   image-rendering: pixelated;
@@ -122,6 +179,15 @@ button:active {
   animation-iteration-count: infinite;
   animation-duration: 1s;
 }
+@media (prefers-reduced-motion){
+.plant:active {
+  max-block-size: 200px;
+  image-rendering: pixelated;
+  position: relative;
+  animation-name: noFlip;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  }}
 .popbox {
   text-align: center;
   position: relative;
@@ -147,7 +213,7 @@ button:active {
   transform: translate(-50%, -50%);
   box-sizing: inherit;
   color: black;
-  font-size:15px;
+  font-size: 15px;
   text-shadow: 1px 1px 0px white;
 }
 .shop {
