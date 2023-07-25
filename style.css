@@ -113,10 +113,10 @@ h1 {
 }
 button {
   background-color: lightpink;
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-  border-right: 2px solid palevioletred;
-  border-bottom: 2px solid palevioletred;
+  border-top: 2px ridge white;
+  border-left: 2px ridge white;
+  border-right: 2px ridge palevioletred;
+  border-bottom: 2px ridge palevioletred;
   font-family: DotGothic16, "Times New Roman", Arial;
   font: DotGothic16;
   text-align: top;
@@ -128,10 +128,10 @@ button {
 }
 button:active {
   background-color: pink;
-  border-top: 2px solid palevioletred;
-  border-left: 2px solid palevioletred;
-  border-right: 2px solid white;
-  border-bottom: 2px solid white;
+  border-top: 2px ridge palevioletred;
+  border-left: 2px ridge palevioletred;
+  border-right: 2px ridge white;
+  border-bottom: 2px ridge white;
   font-family: DotGothic16, "Times New Roman", Arial;
   font: DotGothic16;
   text-align: top;
