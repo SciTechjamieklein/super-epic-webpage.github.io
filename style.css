@@ -112,6 +112,7 @@ h1 {
   image-rendering: pixelated;
   filter: hue-rotate(270deg) saturate(4) drop-shadow(2px 2px 0px black);
 }
+@media(prefers-color-scheme-dark){
 button {
   background-color: lightpink;
   border-top: 2px solid white;
@@ -126,7 +127,8 @@ button {
   font: DotGothic16;
   text-shadow: 1px 1px 0px white;
   letter-spacing: 5px;
-}
+}}
+@media(prefers-color-scheme:dark){
 button:active {
   background-color: pink;
   border-top: 2px solid palevioletred;
@@ -141,7 +143,7 @@ button:active {
   font: DotGothic16;
   text-shadow: 1px 1px 0px black;
   letter-spacing: 5px;
-}
+}}
 .silly {
   max-block-size: 200px;
   border-radius: 25%;
@@ -216,6 +218,19 @@ button:active {
   font-size: 15px;
   text-shadow: 1px 1px 0px white;
 }
+@media (prefers-color-scheme:dark){
+.centerofbox {
+  max-width: 264px;
+  max-height: 112px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: inherit;
+  color: black;
+  font-size: 15px;
+  text-shadow: 1px 1px 0px white;
+}}
 .shop {
   text-align: center;
   position: static;
