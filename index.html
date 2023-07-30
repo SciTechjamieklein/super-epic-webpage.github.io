@@ -3,15 +3,15 @@
 <title>super epic webpage</title>
 <link rel="stylesheet" href="/super-epic-webpage.github.io/style.css">
 <link rel="icon" href="/super-epic-webpage.github.io/iconic.png">
-<script>if (localStorage.getItem("ycount") == null) {
+<script>/*==this checks local storage to see if there is a save, if not, it makes one==*/
+if (localStorage.getItem("ycount") == null) {
   var yam = 0;
   localStorage.setItem("ycount", yam);
 } else {
   localStorage.getItem("ycount");
   yam = localStorage.getItem("ycount");
 }
-//my code is a surreal nightmare. even i have no idea of whats going on.
-//IT WORKS!!! IT WORKS!!!
+//my code is a surreal nightmare.
 if (localStorage.getItem("icount") == null) {
   var icy = 0;
   localStorage.setItem("icount", icy);
@@ -26,8 +26,34 @@ if (localStorage.getItem("pcount") == null) {
   localStorage.getItem("pcount");
   ponum = localStorage.getItem("pcount");
 }
+if (localStorage.getItem("scount") == null) {
+  var sonum = 0;
+  localStorage.setItem("scount", sonum);
+} else {
+  localStorage.getItem("scount");
+  sonum = localStorage.getItem("scount");
+}
+/*==declares the text variables==*/
 var ah;
 var txt;
+var pota;
+var sou;
+if (ah == null) {
+  ah = "yippee = " + yam;
+  document.getElementById("yoy").innerHTML = ah;
+}
+if (txt == null) {
+  txt = "icy = " + icy;
+  document.getElementById("convert").innerHTML = txt;
+}
+if (pota == null) {
+  pota = "potato = " + ponum;
+  document.getElementById("buyPo").innerHTML = pota;
+}
+if (sou == null) {
+  sou = "soup = " + sonum;
+  document.getElementById("buySo").innerHTML = sou;
+}
 function yoy() {
   yam++;
   localStorage.setItem("ycount", yam);
@@ -92,7 +118,6 @@ function convert() {
   }
 }
 function buyPo() {
-  var pota;
   if (confirm("buy a potato for 1 icy?")) {
     if (ponum == null) {
       ponum = 0;
@@ -112,30 +137,30 @@ function buyPo() {
       if (icy > 0) {
         pota = "potato = " + ponum;
         txt = "icy = " + icy;
-        ocument.getElementById("yoy").innerHTML = ah;
+        document.getElementById("yoy").innerHTML = ah;
         document.getElementById("convert").innerHTML = txt;
         document.getElementById("buyPo").innerHTML = pota;
       } else {
         pota = "potato = " + ponum;
         txt = "icy = " + icy;
-        ocument.getElementById("yoy").innerHTML = ah;
+        document.getElementById("yoy").innerHTML = ah;
         document.getElementById("convert").innerHTML = txt;
         document.getElementById("buyPo").innerHTML = pota;
       }
     }
   } else {
     alert("...");
-    if (pota > 0) {
+    if (ponum > 0) {
       pota = "potato = " + ponum;
       txt = "icy = " + icy;
-      ocument.getElementById("yoy").innerHTML = ah;
+      document.getElementById("yoy").innerHTML = ah;
       document.getElementById("convert").innerHTML = txt;
       document.getElementById("buyPo").innerHTML = pota;
     } else {
       pota = "potato = " + ponum;
       txt = "icy = " + icy;
       localStorage.setItem("pcount", ponum);
-      ocument.getElementById("yoy").innerHTML = ah;
+      document.getElementById("yoy").innerHTML = ah;
       document.getElementById("convert").innerHTML = txt;
       document.getElementById("buyPo").innerHTML = pota;
     }
@@ -144,10 +169,61 @@ function buyPo() {
   document.getElementById("buyPo").innerHTML = pota;
   document.getElementById("convert").innerHTML = txt;
 }
-console.log(
-  "hi there. are you gonna cheat and give yourself yippees or icy or potato?"
-);
-console.log("that is fine with me! :3");
+function buySo() {
+  if (confirm("buy a bowl of soup for 2 icy?")) {
+    if (sonum == null) {
+      sonum = 0;
+    }
+    if (icy >= 2) {
+      --icy;
+      localStorage.setItem("icount", icy);
+      sonum++;
+      localStorage.setItem("scount", sonum);
+      sou = "soup = " + sonum;
+      txt = "icy = " + icy;
+      document.getElementById("yoy").innerHTML = ah;
+      document.getElementById("convert").innerHTML = txt;
+      document.getElementById("buySo").innerHTML = sou;
+    } else {
+      alert("you do not have enough icy...");
+      if (icy > 0) {
+        sou = "soup = " + sonum;
+        txt = "icy = " + icy;
+        document.getElementById("yoy").innerHTML = ah;
+        document.getElementById("convert").innerHTML = txt;
+        document.getElementById("buySo").innerHTML = sou;
+      } else {
+        sou = "soup = " + sonum;
+        txt = "icy = " + icy;
+        document.getElementById("yoy").innerHTML = ah;
+        document.getElementById("convert").innerHTML = txt;
+        document.getElementById("buySo").innerHTML = sou;
+      }
+    }
+  } else {
+    alert("...");
+    if (sonum > 0) {
+      sou = "soup = " + sonum;
+      txt = "icy = " + icy;
+      document.getElementById("yoy").innerHTML = ah;
+      document.getElementById("convert").innerHTML = txt;
+      document.getElementById("buySo").innerHTML = sou;
+    } else {
+      sou = "soup = " + sonum;
+      txt = "icy = " + icy;
+      localStorage.setItem("scount", sonum);
+      document.getElementById("yoy").innerHTML = ah;
+      document.getElementById("convert").innerHTML = txt;
+      document.getElementById("buySo").innerHTML = sou;
+    }
+  }
+  document.getElementById("yoy").innerHTML = ah;
+  document.getElementById("buySo").innerHTML = sou;
+  document.getElementById("convert").innerHTML = txt;
+}
+
+console.log("hi there. are you gonna cheat and give yourself stuff");
+console.log("thats fine with me! :3");
 console.log(
   "have fun in Inspect! if you want, you can look at my mess of code while youre here."
 );
@@ -162,48 +238,52 @@ function makeDark() {
   var element = document.body;
   element.classList.toggle("accessib");
 }
-
-//coding is like baking while blindfolded but also you have to make sure the oven knows how to turn on and the cupcake batter is real before you put it in the oven
-</script>
-<h1>super epic webpage</h1>
+</script><center>
+  <h1>super epic webpage</h1>
+</center>
+<b class="thingy">scroll down and find fun things!</b>
 <img src="https://i.imgflip.com/31pf3y.png" class="ceiling" alt="a cat peeking through a hole">
-<h2>scroll down and find fun things!</h2>
+<br>
 <br>
 <button onclick="makeDark()">toggle background</button><br><br>
 <div class="popbox">
-  <div class="topofbox">warnings:</div>
+  <div class="topofbox">warning:</div>
   <img src="https://art.pixilart.com/sr2b532a56d320f.png" class="popboxi" />
   <div class="centerofbox">this is not a very mobile friendly site! view on desktop for best experience.</div>
 </div>
-<p>:3</p>
-<br><br><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F042%2F808%2Fcover1.jpg&amp;f=1&amp;nofb=1&amp;ipt=9f320674b3793160106047f613a5b33b02908270cc8cdfb6eb718b16d62101ca&amp;ipo=images" alt="an image of a black and white cat" class="maxwell" id="cat" />
-<p>here's a cat! his name is maxwell and he likes to dance.<br>...<br>if you're here you're probably aware of that fact already (it's a big meme).<br>if you hover over maxwell with your mouse or gently touch him with your finger or really just interact with him in any way he'll become more pink.<br><br><br>a cool thing about this webpage is...<br>i barely even know how to make a webpage!<br>this is just me making some goofy fun stuff and trying to learn from it.<br>:)<br><br>this is an experiment that i made because i was bored<br><br>ฅ^•ﻌ•^ฅ<br>cat<br><br></p>
-<button onclick="yoy()">CLICK TO OBTAIN YIPPEE</button>
-<h3>i love buttons!</h3>
-<p>oh wow look a cat is sliding across the page. (this webpage is full of cats)</p>
-<div><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FZr-qM5Vrd0g%2Fmaxresdefault.jpg&amp;f=1&amp;nofb=1&amp;ipt=079d873201a667d568e97830d5caa5915a2f8b71c05a6aebcdfd492260ba60c4&amp;ipo=images" alt="an image of an orange cat." class="silly"></div>
-<h3>normal planter:</h3><br>
-<img src="https://art.pixilart.com/sr26a5ab64108af.png" alt="a pixel art planter with some small flowers in it." class="plant">
 <div class="inventory">
   <h2>your inventory:</h2>
   <p id="yoy"></p>
   <p id="convert"></p>
   <p id="buyPo"></p>
+  <p id="buySo"></p>
 </div>
+<p>:3</p>
+<br><br><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F042%2F808%2Fcover1.jpg&amp;f=1&amp;nofb=1&amp;ipt=9f320674b3793160106047f613a5b33b02908270cc8cdfb6eb718b16d62101ca&amp;ipo=images" alt="a black and white cat" class="maxwell" id="cat" />
+<p>here's a cat! his name is maxwell and he likes to dance.<br>...<br>if you're here you're probably aware of that fact already (it's a big meme).<br>if you hover over maxwell with your mouse or gently touch him with your finger or really just interact with him in any way he'll become more pink.<br><br><br>a cool thing about this webpage is...<br>i barely even know how to make a webpage!<br>this is just me making some goofy fun stuff and trying to learn from it.<br>:)<br><br>this is an experiment that i made because i was bored<br><br>ฅ^•ﻌ•^ฅ<br>cat<br><br></p>
+<button onclick="yoy()">CLICK TO OBTAIN YIPPEE</button>
+<p><b>i love buttons!</b></p>
+<p>oh wow look a cat is sliding across the page. (this webpage is full of cats)</p>
+<div><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FZr-qM5Vrd0g%2Fmaxresdefault.jpg&amp;f=1&amp;nofb=1&amp;ipt=079d873201a667d568e97830d5caa5915a2f8b71c05a6aebcdfd492260ba60c4&amp;ipo=images" alt="an orange cat who is happy" class="silly"></div>
+<h3>normal planter:</h3><br>
+<img src="https://art.pixilart.com/sr26a5ab64108af.png" alt="a pixel art planter with some small flowers in it" class="plant">
 <br>
 <button onclick="convert()" class="icy-button">convert</button>
 <p>what time is it? <b>imaginary currency yay</b> time!<br>you can convert some of your yippees into icy if you want.</p><br>
 <div class="shop">
-  <h3>shop:</h3>
-  <p>(spend all your hard earned icy)</p>
-  <img src="https://art.pixilart.com/sr267d4368f89c0.png" role="button" id="potato" alt="a potato" class="potato" height="32" onclick="buyPo()">
+  <div class="blocc">
+    <h3>shop:</h3>
+    <p>(spend all your hard earned icy)</p>
+    <img src="https://art.pixilart.com/sr267d4368f89c0.png" role="button" id="potato" alt="a potato" class="shopItem" height="32" onclick="buyPo()">
+    <img src="https://art.pixilart.com/sr24c579fd522aws3.png" id="soup" alt="a bowl of soup" class="shopItem" height="32" onclick="buySo()">
+  </div>
 </div><br>
 <button onclick="erase()">clear all progress</button>
 <h2>what i plan on adding in the near future:</h2>
 <h3>more shop items:</h3>
-<p>-soup<br>-uranium fuel rods<br>frogs</p>
+<p>-uranium fuel rods<br>-frogs</p>
 <h3>accessibility stuffs:</h3>
--screen reader accessible<br>-some audio elements</p>
+-some audio elements</p>
 <br>
 <br>
 <h3>this is the end of the webpage as we know it (and i feel fine). i will add more stuff later.</h3>
