@@ -27,7 +27,7 @@
     background-image: url("https://art.pixilart.com/sr2b53566ca1caws3.png");
     background-size: 64px 64px;
     backdrop-filter: brightness(15%);
-    -webkit-backdrop-filter:brightness(15%);
+    -webkit-backdrop-filter: brightness(15%);
   }
 }
 @keyframes slide {
@@ -53,7 +53,7 @@
     rotate: 360deg;
   }
 }
-@keyframes noFlip{
+@keyframes noFlip {
   0% {
   }
   50% {
@@ -97,9 +97,12 @@ body {
 }
 h1 {
   letter-spacing: 15px;
+  width: 600px;
+  position: relative;
   border: 4px solid transparent;
   border-image: url("https://art.pixilart.com/sr239a6b22d1faws3.png") 100 round;
-  -webkit-border-image:url("https://art.pixilart.com/sr239a6b22d1faws3.png") 100 round;
+  -webkit-border-image: url("https://art.pixilart.com/sr239a6b22d1faws3.png")
+    100 round;
 }
 .maxwell {
   max-block-size: 200px;
@@ -137,7 +140,7 @@ button:active {
   font-family: DotGothic16, "Times New Roman", Arial;
   font: DotGothic16;
   text-align: top;
-  color: white;
+  color: black;
   font-family: DotGothic16, "Times New Roman", Arial;
   font: DotGothic16;
   text-shadow: 1px 1px 0px black;
@@ -180,15 +183,16 @@ button:active {
   animation-iteration-count: infinite;
   animation-duration: 1s;
 }
-@media (prefers-reduced-motion){
-.plant:active {
-  max-block-size: 200px;
-  image-rendering: pixelated;
-  position: relative;
-  animation-name: noFlip;
-  animation-iteration-count: infinite;
-  animation-duration: 10s;
-  }}
+@media (prefers-reduced-motion) {
+  .plant:active {
+    max-block-size: 200px;
+    image-rendering: pixelated;
+    position: relative;
+    animation-name: noFlip;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+  }
+}
 .popbox {
   text-align: center;
   position: relative;
@@ -208,6 +212,14 @@ button:active {
 .centerofbox {
   max-width: 264px;
   max-height: 112px;
+  border-top:4px ridge white;
+  border-left:4px ridge white;
+  border-bottom:4px ridge palevioletred;
+  border-right:4px ridge palevioletred;
+  padding-left:61px;
+  padding-right:61px;
+  padding-bottom:55px;
+  padding-top:73px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -220,30 +232,57 @@ button:active {
 .shop {
   text-align: center;
   position: static;
-  background-color: blue;
+  background-image: linear-gradient(blue, darkviolet, magenta, orange, yellow);
+  border: 4px ridge;
+  border-left-color: mediumblue;
+  border-top-color: mediumblue;
+  border-right-color: navy;
+  border-bottom-color: navy;
+  background-color: darkblue;
   margin-left: auto;
   margin-right: auto;
   max-width: 500px;
-  filter: drop-shadow(2px 2px 0px black);
   box-sizing: content-box;
 }
-.potato {
+.shopItem {
 }
-.potato:hover {
+.shopItem:hover {
   filter: drop-shadow(1px 1px 0px black);
 }
 .inventory {
-  position: static;
-  background-image: linear-gradient(blue, cyan, blue);
+  color: white;
+  text-shadow: none;
+  position: fixed;
+  width: 200px;
+  right: 0%;
+  top: 0%;
+  padding: 5px;
+  border: 4px ridge;
+  border-left-color: mediumblue;
+  border-top-color: mediumblue;
+  border-right-color: navy;
+  border-bottom-color: navy;
+  background-color: darkblue;
+}
+.ceiling {
+  height: 136px;
+  width: 210px;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+.thingy {
+  text-align: center;
+}
+.blocc {
+  border: 4px ridge;
+  border-left-color: mediumblue;
+  border-top:none;
+  border-top:solid 8px darkblue;
+  border-right-color: navy;
+  border-bottom: solid 8px darkblue;
+  background-color: darkblue;
+  width: 400px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 200px;
-  filter: drop-shadow(2px 2px 0px black);
-}
-.ceiling{
-height:136px;
-width:210px;
-position:absolute;
-left:0%;
-top:0%;
 }
