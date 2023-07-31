@@ -210,8 +210,8 @@ button:active {
   letter-spacing: 15px;
 }
 .centerofbox {
-  max-width: 280px;
-  max-height: 144px;
+  max-width: 274px;
+  max-height: 140px;
   border-top:4px ridge white;
   border-left:4px ridge white;
   border-bottom:4px ridge palevioletred;
