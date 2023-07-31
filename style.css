@@ -201,6 +201,10 @@ button:active {
   filter: drop-shadow(0px 0px 5px white);
 }
 .popboxi {
+  border-top:4px ridge white;
+  border-left:4px ridge white;
+  border-bottom:4px ridge palevioletred;
+  border-right:4px ridge palevioletred;
   max-block-size: 200px;
 }
 .topofbox {
@@ -210,12 +214,6 @@ button:active {
   letter-spacing: 15px;
 }
 .centerofbox {
-  max-width: 272px;
-  max-height: 142px;
-  border-top:4px ridge white;
-  border-left:4px ridge white;
-  border-bottom:4px ridge palevioletred;
-  border-right:4px ridge palevioletred;
   padding-left:61px;
   padding-right:61px;
   padding-bottom:55px;
