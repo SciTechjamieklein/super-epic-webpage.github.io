@@ -3,6 +3,7 @@
 <title>super epic webpage</title>
 <link rel="stylesheet" href="/super-epic-webpage.github.io/style.css">
 <link rel="icon" href="/super-epic-webpage.github.io/iconic.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>/*==this checks local storage to see if there is a save, if not, it makes one==*/
 if (localStorage.getItem("ycount") == null) {
   var yam = 0;
@@ -235,56 +236,72 @@ function erase() {
 }
 //coding is like baking while blindfolded but also you have to make sure the oven knows how to turn on and the cupcake batter is real before you put it in the oven
 function makeDark() {
-  var element = document.body;
+  var element = document.getElementsByTagName("main", "mainleft", "mainright");
   element.classList.toggle("accessib");
 }
-</script><center>
-  <h1>super epic webpage</h1>
-</center>
-<b class="thingy">scroll down and find fun things!</b>
-<img src="https://i.imgflip.com/31pf3y.png" class="ceiling" alt="a cat peeking through a hole">
-<br>
-<br>
-<button onclick="makeDark()">toggle background</button><br><br>
-<div class="popbox">
-  <div class="topofbox">warning:</div>
-  <img src="/super-epic-webpage.github.io/pixelpopup.png" class="popboxi">
-  <div class="centerofbox">this is not a very mobile friendly site! view on desktop for best experience.</div>
+
+</script><div class="grid-container">
+  <header>
+    <div>
+      <h1>super epic webpage</h1>
+    </div>
+    <!notes and stuff: ~add yippee and meow sound effects ~you can upload the files to github and then src them normally ~fix the freaking layout so it looks presentable ~check if that toggle issue in the js is a real thing or if its just a copendent.io issue ~oh yeah add music i guess ~you are doing very well and deserve to be proud of yourself ~i love you ~fix the layout though ~check accessibility later too ~yeah have fun with this mess ~yippee ~oh yeah maybe upload some art ~also consider getting a domain ~also ask parents for instagram to you can replace the placeholder ~also grab friends, teach them basic html and css, and create a webring ~customize the audio controls>
+      <div><b class="thingy">scroll down and find fun things!</b></div>
+      <div>instagram link placeholder</div>
+      <div>webring placeholder</div>
+  </header>
+  <mainleft>
+    <div class="uh">
+      <h2>a cool thing about this webpage is...</h2><br>i barely even know how to make a webpage!<br>this is just me making some goofy fun stuff and trying to learn from it.<br>:)<br><br>this is an experiment that i made because i was bored<br><br>ฅ^•ﻌ•^ฅ<br>cat<br><br></p>
+      <img src="https://i.imgflip.com/31pf3y.png" class="ceiling" alt="a cat peeking through a hole">
+    </div>
+  </mainleft>
+  <main><br>
+    <button onclick="makeDark()">toggle side gradients</button><br><br>
+    <div class="popbox">
+      <div class="topofbox">warning:</div>
+      <img src="https://scitechjamieklein.github.io/super-epic-webpage.github.io/pixelpopup.png" class="popboxi"><br>
+      <div class="centerofbox">this is not a mobile friendly site!<br>view on desktop for best experience.<br>also cat warning. there are cats.<br>also website design choices warning. <br><b>i made choices.</b></div><br><br>
+    </div>
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F042%2F808%2Fcover1.jpg&amp;f=1&amp;nofb=1&amp;ipt=9f320674b3793160106047f613a5b33b02908270cc8cdfb6eb718b16d62101ca&amp;ipo=images" alt="a black and white cat" class="maxwell" id="cat" />
+    <p>here's a cat! his name is maxwell and he likes to dance.<br>...<br>if you're here you're probably aware of that fact already (it's a big meme).<br>if you hover over maxwell with your mouse or gently touch him with your finger or really just interact with him in any way he'll become more pink.<br><br><br>
+      <button onclick="yoy()">CLICK TO OBTAIN YIPPEE</button>
+    <p><b>i love buttons!</b></p>
+    <p>oh wow look a cat is sliding across the page. (this webpage is full of cats)</p>
+    <div><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FZr-qM5Vrd0g%2Fmaxresdefault.jpg&amp;f=1&amp;nofb=1&amp;ipt=079d873201a667d568e97830d5caa5915a2f8b71c05a6aebcdfd492260ba60c4&amp;ipo=images" alt="an orange cat who is happy" class="silly"></div>
+    <b>normal planter:</b><br>
+    <img src="https://art.pixilart.com/sr26a5ab64108af.png" alt="a pixel art planter with some small flowers in it" class="plant">
+    <br>
+    <button onclick="convert()" class="icy-button">convert</button>
+    <p>what time is it? <b>imaginary currency yay</b> time!<br>you can convert some of your yippees into icy if you want.</p><br>
+    <div class="shop">
+      <div class="blocc">
+        <h2>shop:</h2>
+        <p>(spend all your hard earned icy)</p>
+        <img src="https://art.pixilart.com/sr267d4368f89c0.png" role="button" id="potato" alt="a potato" class="shopItem" height="32" onclick="buyPo()">
+        <img src="https://art.pixilart.com/sr24c579fd522aws3.png" id="soup" alt="a bowl of soup" class="shopItem" height="32" onclick="buySo()">
+      </div>
+    </div><br>
+    <button onclick="erase()">clear all progress</button><br>
+  </main>
+  <mainright>
+    <div class="inventory">
+      <h2>your inventory:</h2>
+      <p id="yoy"></p>
+      <p id="convert"></p>
+      <p id="buyPo"></p>
+      <p id="buySo"></p>
+      <audio controls><source src="super-epic-webpage.github.io/chill.wav" type="audio/wav">your browser does not support the audio element</audio>
+    </div>
+    
+  </mainright>
+  <aside>
+
+  </aside>
+  <br>
+  <br>
+  <footer>
+    <b>this is the end of the webpage as we know it (and i feel fine)</b>
+  </footer>
 </div>
-<div class="inventory">
-  <h2>your inventory:</h2>
-  <p id="yoy"></p>
-  <p id="convert"></p>
-  <p id="buyPo"></p>
-  <p id="buySo"></p>
-</div>
-<p>:3</p>
-<br><br><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F042%2F808%2Fcover1.jpg&amp;f=1&amp;nofb=1&amp;ipt=9f320674b3793160106047f613a5b33b02908270cc8cdfb6eb718b16d62101ca&amp;ipo=images" alt="a black and white cat" class="maxwell" id="cat" />
-<p>here's a cat! his name is maxwell and he likes to dance.<br>...<br>if you're here you're probably aware of that fact already (it's a big meme).<br>if you hover over maxwell with your mouse or gently touch him with your finger or really just interact with him in any way he'll become more pink.<br><br><br>a cool thing about this webpage is...<br>i barely even know how to make a webpage!<br>this is just me making some goofy fun stuff and trying to learn from it.<br>:)<br><br>this is an experiment that i made because i was bored<br><br>ฅ^•ﻌ•^ฅ<br>cat<br><br></p>
-<button onclick="yoy()">CLICK TO OBTAIN YIPPEE</button>
-<p><b>i love buttons!</b></p>
-<p>oh wow look a cat is sliding across the page. (this webpage is full of cats)</p>
-<div><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FZr-qM5Vrd0g%2Fmaxresdefault.jpg&amp;f=1&amp;nofb=1&amp;ipt=079d873201a667d568e97830d5caa5915a2f8b71c05a6aebcdfd492260ba60c4&amp;ipo=images" alt="an orange cat who is happy" class="silly"></div>
-<h3>normal planter:</h3><br>
-<img src="https://art.pixilart.com/sr26a5ab64108af.png" alt="a pixel art planter with some small flowers in it" class="plant">
-<br>
-<button onclick="convert()" class="icy-button">convert</button>
-<p>what time is it? <b>imaginary currency yay</b> time!<br>you can convert some of your yippees into icy if you want.</p><br>
-<div class="shop">
-  <div class="blocc">
-    <h3>shop:</h3>
-    <p>(spend all your hard earned icy)</p>
-    <img src="https://art.pixilart.com/sr267d4368f89c0.png" role="button" id="potato" alt="a potato" class="shopItem" height="32" onclick="buyPo()">
-    <img src="https://art.pixilart.com/sr24c579fd522aws3.png" id="soup" alt="a bowl of soup" class="shopItem" height="32" onclick="buySo()">
-  </div>
-</div><br>
-<button onclick="erase()">clear all progress</button>
-<h2>what i plan on adding in the near future:</h2>
-<h3>more shop items:</h3>
-<p>-uranium fuel rods<br>-frogs</p>
-<h3>accessibility stuffs:</h3>
--some audio elements</p>
-<br>
-<br>
-<h3>this is the end of the webpage as we know it (and i feel fine). i will add more stuff later.</h3>
 </html>
