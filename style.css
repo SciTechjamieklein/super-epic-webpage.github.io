@@ -1,19 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&family=Major+Mono+Display&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @keyframes yippee {
   0% {
-    background-color: hotpink;
+    background-image: linear-gradient(
+      magenta,
+      blueviolet,
+      cyan,
+      blueviolet,
+      magenta
+    );
+    background-size: 64px 4000px;
+    background-position-y: 0px;
   }
   25% {
-    background-color: blueviolet;
+    background-image: linear-gradient(
+      magenta,
+      blueviolet,
+      cyan,
+      blueviolet,
+      magenta
+    );
+    background-size: 64px 4000px;
+    background-position-y: 1000px;
   }
   50% {
-    background-color: deepskyblue;
+    background-image: linear-gradient(
+      magenta,
+      blueviolet,
+      cyan,
+      blueviolet,
+      magenta
+    );
+    background-size: 64px 4000px;
+    background-position-y: 2000px;
   }
   75% {
-    background-color: blueviolet;
+    background-image: linear-gradient(
+      magenta,
+      blueviolet,
+      cyan,
+      blueviolet,
+      magenta
+    );
+    background-size: 64px 4000px;
+    background-position-y: 3000px;
   }
   100% {
-    background-color: hotpink;
+    background-image: linear-gradient(
+      magenta,
+      blueviolet,
+      cyan,
+      blueviolet,
+      magenta
+    );
+    background-size: 64px 4000px;
+    background-position-y: 4000px;
   }
 }
 @keyframes access {
@@ -32,13 +72,13 @@
 }
 @keyframes slide {
   0% {
-    right: 35%;
+    right: 25%;
   }
   50% {
-    right: -35%;
+    right: -25%;
   }
   100% {
-    right: 35%;
+    right: 25%;
   }
 }
 @keyframes whee {
@@ -75,17 +115,6 @@
 }
 body {
   color: white;
-  animation-name: yippee;
-  animation-iteration-count: infinite;
-  animation-duration: 15s;
-  text-align: center;
-  font-family: DotGothic16, "Times New Roman", Arial;
-  font: DotGothic16;
-  text-shadow: 1px 1px 0px black;
-  cursor: url("super-epic-webpage/cursorwhee.png");
-}
-.accessib {
-  color: white;
   animation-name: access;
   animation-iteration-count: infinite;
   animation-duration: 30s;
@@ -95,14 +124,13 @@ body {
   text-shadow: 1px 1px 0px black;
   cursor: url("super-epic-webpage/cursorwhee.png");
 }
+.accessib {
+  background-color: navy;
+}
 h1 {
   letter-spacing: 15px;
   width: 600px;
   position: relative;
-  border: 4px solid transparent;
-  border-image: url("https://art.pixilart.com/sr239a6b22d1faws3.png") 100 round;
-  -webkit-border-image: url("https://art.pixilart.com/sr239a6b22d1faws3.png")
-    100 round;
 }
 .maxwell {
   max-block-size: 200px;
@@ -148,7 +176,7 @@ button:active {
 }
 .silly {
   max-block-size: 200px;
-  border-radius: 25%;
+  border: 4px ridge blue;
   image-rendering: pixelated;
   position: relative;
   filter: drop-shadow(2px 2px 0px black);
@@ -160,7 +188,7 @@ button:active {
 @media (prefers-reduced-motion) {
   .silly {
     max-block-size: 200px;
-    border-radius: 25%;
+    border: 4px ridge blue;
     image-rendering: pixelated;
     position: relative;
     filter: drop-shadow(2px 2px 0px black);
@@ -201,30 +229,27 @@ button:active {
   filter: drop-shadow(0px 0px 5px white);
 }
 .popboxi {
-  border-top:4px ridge white;
-  border-left:4px ridge white;
-  border-bottom:4px ridge palevioletred;
-  border-right:4px ridge palevioletred;
+  border-top: 4px ridge white;
+  border-left: 4px ridge white;
+  border-bottom: 4px ridge palevioletred;
+  border-right: 4px ridge palevioletred;
   max-block-size: 200px;
 }
 .topofbox {
   position: absolute;
-  top: 8px;
+  top: 3px;
   left: 40%;
   letter-spacing: 15px;
+  font-size: 25px;
 }
 .centerofbox {
-  padding-left:61px;
-  padding-right:61px;
-  padding-bottom:55px;
-  padding-top:73px;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-sizing: inherit;
   color: black;
-  font-size: 15px;
+  font-size: 16px;
   text-shadow: 1px 1px 0px white;
 }
 .shop {
@@ -249,11 +274,110 @@ button:active {
 }
 .inventory {
   color: white;
-  text-shadow: none;
-  position: fixed;
+  text-shadow: 1px 1px 0px black;
+  position: relative;
   width: 200px;
-  right: 0%;
+  padding: 5px;
+  border: 4px ridge;
+  border-left-color: mediumblue;
+  border-top-color: mediumblue;
+  border-right-color: navy;
+  border-bottom-color: navy;
+  background-color: darkblue;
+  float: right;
+}
+.ceiling {
+  height: 136px;
+  width: 210px;
   top: 0%;
+  left: 50%;
+  z-index: 3;
+  position: relative;
+}
+.thingy {
+  text-align: center;
+}
+.blocc {
+  border: 4px ridge;
+  border-left-color: mediumblue;
+  border-top: none;
+  border-top: solid 8px darkblue;
+  border-right-color: navy;
+  border-bottom: solid 8px darkblue;
+  background-color: darkblue;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+div.grid-container {
+  display: grid;
+  width: 99vw;
+  height: 99vh;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 25% 15% 60% 5%;
+}
+header {
+  display: flex;
+  align-items: center;
+  grid-column: span 10;
+  border: 4px ridge;
+  border-left-color: mediumblue;
+  border-top-color: mediumblue;
+  border-right-color: navy;
+  border-bottom-color: navy;
+  background-color: darkblue;
+}
+main {
+  position: relative;
+  float: center;
+  grid-column: span 6;
+  grid-row: span 10;
+  background-color: darkblue;
+}
+mainleft {
+  float: left;
+  grid-column: span 2;
+  grid-row: span 10;
+  animation-name: yippee;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+}
+mainright {
+  float: right;
+  grid-column: span 2;
+  grid-row: span 10;
+  animation-name: yippee;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+}
+aside {
+  grid-column: span 10;
+  position: relative;
+  float: center;
+}
+footer {
+  top: 100%;
+  grid-column: span 10;
+  position: relative;
+  float: center, bottom;
+  border: 4px ridge;
+  border-left-color: mediumblue;
+  border-top-color: mediumblue;
+  border-right-color: navy;
+  border-bottom-color: navy;
+  background-color: darkblue;
+}
+header > div {
+  padding: 0 1em;
+}
+header > div:nth-child(1) {
+  margin-right: 15%;
+}
+.uh {
+  color: white;
+  text-shadow: 1px 1px 0px black;
+  position: relative;
+  width: 200px;
   padding: 5px;
   border: 4px ridge;
   border-left-color: mediumblue;
@@ -262,25 +386,7 @@ button:active {
   border-bottom-color: navy;
   background-color: darkblue;
 }
-.ceiling {
-  height: 136px;
-  width: 210px;
-  position: absolute;
-  left: 0%;
-  top: 0%;
-}
-.thingy {
-  text-align: center;
-}
-.blocc {
+audio{
+  width:200px;
   border: 4px ridge;
-  border-left-color: mediumblue;
-  border-top:none;
-  border-top:solid 8px darkblue;
-  border-right-color: navy;
-  border-bottom: solid 8px darkblue;
-  background-color: darkblue;
-  width: 400px;
-  margin-left: auto;
-  margin-right: auto;
 }
