@@ -58,16 +58,10 @@
 }
 @keyframes access {
   from {
-    background-image: url("https://art.pixilart.com/sr2b53566ca1caws3.png");
-    background-size: 64px 64px;
-    backdrop-filter: brightness(15%);
-    -webkit-backdrop-filter: brightness(15%);
+    background-color: navy;
   }
   to {
-    background-image: url("https://art.pixilart.com/sr2b53566ca1caws3.png");
-    background-size: 64px 64px;
-    backdrop-filter: brightness(15%);
-    -webkit-backdrop-filter: brightness(15%);
+    background-color: navy;
   }
 }
 @keyframes slide {
@@ -117,15 +111,20 @@ body {
   color: white;
   animation-name: access;
   animation-iteration-count: infinite;
+  background-image: url("https://art.pixilart.com/sr2b53566ca1caws3.png");
+  background-image-repeat: repeat;
+  background-size: 64px 64px;
   animation-duration: 30s;
   text-align: center;
   font-family: DotGothic16, "Times New Roman", Arial;
   font: DotGothic16;
   text-shadow: 1px 1px 0px black;
-  cursor: url("super-epic-webpage/cursorwhee.png");
+  cursor: url("/super-epic-webpage/cursorwhee.png");
 }
 .accessib {
-  background-color: navy;
+  animation-name: access;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 h1 {
   letter-spacing: 15px;
@@ -333,6 +332,12 @@ main {
   grid-column: span 6;
   grid-row: span 10;
   background-color: darkblue;
+  border: 4px ridge;
+  border-left-color: mediumblue;
+  border-top-color: mediumblue;
+  border-right-color: navy;
+  border-bottom-color: navy;
+  background-color: darkblue;
 }
 mainleft {
   float: left;
@@ -354,6 +359,13 @@ aside {
   grid-column: span 10;
   position: relative;
   float: center;
+  background-color: darkblue;
+  border: 4px ridge;
+  border-left-color: mediumblue;
+  border-top-color: mediumblue;
+  border-right-color: navy;
+  border-bottom-color: navy;
+  background-color: darkblue;
 }
 footer {
   top: 100%;
@@ -386,6 +398,36 @@ header > div:nth-child(1) {
   border-bottom-color: navy;
   background-color: darkblue;
 }
-audio{
-  width:200px;
+audio {
+  width: 200px;
+}
+.plpabutton {
+  height: 32px;
+  width: 32px;
+  border: 4px ridge;
+  border-top-color: white;
+  border-right-color: palevioletred;
+  border-left-color: white;
+  border-bottom-color: palevioletred;
+}
+.plpabutton:onclick {
+  height: 32px;
+  width: 32px;
+  border: 4px ridge;
+  border-top-color: white;
+  border-right-color: palevioletred;
+  border-left-color: white;
+  border-bottom-color: palevioletred;
+}
+.plpabutton:hover {
+  height: 32px;
+  width: 32px;
+  border: 4px ridge;
+  border-top-color: white;
+  border-right-color: palevioletred;
+  border-left-color: white;
+  border-bottom-color: palevioletred;
+  animation-name: noFlip;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
