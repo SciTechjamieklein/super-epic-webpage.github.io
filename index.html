@@ -35,10 +35,7 @@ if (localStorage.getItem("scount") == null) {
   sonum = localStorage.getItem("scount");
 }
 /*==declares the text variables==*/
-var ah;
-var txt;
-var pota;
-var sou;
+var ah, txt, pota, sou;
 if (ah == null) {
   ah = "yippee = " + yam;
   document.getElementById("yoy").innerHTML = ah;
@@ -236,21 +233,26 @@ function erase() {
 }
 //coding is like baking while blindfolded but also you have to make sure the oven knows how to turn on and the cupcake batter is real before you put it in the oven
 function makeDark() {
-  var element = document.getElementsByTagName("main", "mainleft", "mainright");
-  element.classList.toggle("accessib");
+  var exploding = document.getElementById("stupif");
+  exploding.classList.toggle("accessib");
+  var urmom = document.getElementById("scree");
+  urmom.classList.toggle("accessib");
 }
-
-</script><div class="grid-container">
+//why the heck is it not toggling toggle is a function what
+var play = false;
+//i love coding
+//i also hate coding
+</script>
+  <div class="grid-container">
   <header>
     <div>
       <h1>super epic webpage</h1>
     </div>
-    <!notes and stuff: ~add yippee and meow sound effects ~you can upload the files to github and then src them normally ~fix the freaking layout so it looks presentable ~check if that toggle issue in the js is a real thing or if its just a copendent.io issue ~oh yeah add music i guess ~you are doing very well and deserve to be proud of yourself ~i love you ~fix the layout though ~check accessibility later too ~yeah have fun with this mess ~yippee ~oh yeah maybe upload some art ~also consider getting a domain ~also ask parents for instagram to you can replace the placeholder ~also grab friends, teach them basic html and css, and create a webring ~customize the audio controls>
-      <div><b class="thingy">scroll down and find fun things!</b></div>
-      <div>instagram link placeholder</div>
-      <div>webring placeholder</div>
+    <div><b class="thingy">scroll down and find fun things!</b></div>
+    <div>instagram link placeholder</div>
+    <div>webring placeholder</div>
   </header>
-  <mainleft>
+  <mainleft id="stupif">
     <div class="uh">
       <h2>a cool thing about this webpage is...</h2><br>i barely even know how to make a webpage!<br>this is just me making some goofy fun stuff and trying to learn from it.<br>:)<br><br>this is an experiment that i made because i was bored<br><br>ฅ^•ﻌ•^ฅ<br>cat<br><br></p>
       <img src="https://i.imgflip.com/31pf3y.png" class="ceiling" alt="a cat peeking through a hole">
@@ -284,19 +286,24 @@ function makeDark() {
     </div><br>
     <button onclick="erase()">clear all progress</button><br>
   </main>
-  <mainright>
+  <mainright id="scree">
     <div class="inventory">
       <h2>your inventory:</h2>
       <p id="yoy"></p>
       <p id="convert"></p>
       <p id="buyPo"></p>
       <p id="buySo"></p>
-      <audio controls><source src="/super-epic-webpage.github.io/chill.wav" type="audio/wav">your browser does not support the audio element</audio>
+      <h4>some really cool music:</h4>
+      <audio loop id="chillwav" preload="none">
+        <source src="/super-epic-webpage.github.io/chill.wav" type="audio/wav">your browser does not support the audio element
+      </audio>
+      <img src="https://art.pixilart.com/sr26345974c79aws3.png" type="button" id="plpa" class="plpabutton" onclick='if(play==true){document.getElementById("plpa").src="https://art.pixilart.com/sr26345974c79aws3.png";play=false;chillwav.pause()}else{if(play==false){document.getElementById("plpa").src="https://art.pixilart.com/sr2d288e4c10caws3.png";play=true;chillwav.play()}}'>
+
     </div>
-    
+
   </mainright>
   <aside>
-
+    <p>wow... i do not not know what to put down here.</p>
   </aside>
   <br>
   <br>
