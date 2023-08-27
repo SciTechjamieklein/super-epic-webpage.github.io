@@ -431,10 +431,24 @@ audio {
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
-.eepy{
-  height:200px;
-  width:200px;
-  margin-left:auto;
-  margin-right:auto;
-  filter:drop-shadow(1px 1px 0px black);
+.eepy {
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(1px 1px 0px black);
+}
+
+.nogif {
+  visibility: hidden;
+}
+.red {
+  color: red;
+}
+.eheheh {
+  visibility: hidden;
+}
+.funkyblink {
+  width: 20%;
+  height: 20%;
 }
