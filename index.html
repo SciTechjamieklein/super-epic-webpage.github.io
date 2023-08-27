@@ -173,7 +173,7 @@ function buySo() {
       sonum = 0;
     }
     if (icy >= 2) {
-      --icy;
+      icy -= 2;
       localStorage.setItem("icount", icy);
       sonum++;
       localStorage.setItem("scount", sonum);
@@ -238,10 +238,25 @@ function makeDark() {
   var urmom = document.getElementById("scree");
   urmom.classList.toggle("accessib");
 }
+var blinkclik = true;
+function noBlink() {
+  var funkyvar = document.getElementById("blinkies");
+  funkyvar.classList.toggle("nogif");
+  if (blinkclik == true) {
+    document.getElementById("blinkbutton").innerHTML =
+      "click to turn on blinkies";
+    blinkclik = false;
+  } else {
+    if (blinkclik == false) {
+      document.getElementById("blinkbutton").innerHTML =
+        "click to turn off blinkies";
+      blinkclik = true;
+    }
+  }
+}
 //why the heck is it not toggling toggle is a function what
 var play = false;
-//i love coding
-//i also hate coding
+
 </script>
   <div class="grid-container">
   <header>
@@ -259,12 +274,15 @@ var play = false;
     </div>
   </mainleft>
   <main><br>
-    <button onclick="makeDark()">toggle side gradients</button><br><br>
+    <button onclick="makeDark()">toggle side gradients</button>
+    <button onclick="noBlink()" id="blinkbutton">click to turn off blinkies</button><br><br>
+    <h2 class="red">if you have epilepsy turn off blinkies</h2>
     <div class="popbox">
       <div class="topofbox">warning:</div>
-      <img src="https://scitechjamieklein.github.io/super-epic-webpage.github.io/pixelpopup.png" class="popboxi"><br>
+      <img src="https://scitechjamieklein.github.io/super-epic-webpage.github.io/pixelpopup.png" class="popboxi">
       <div class="centerofbox">this is not a mobile friendly site!<br>view on desktop for best experience.<br>also cat warning. there are cats.<br>also website design choices warning. <br><b>i made choices.</b></div><br><br>
     </div>
+    <p>okay now that the warnings are over the fun can begin!</p>
     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F042%2F808%2Fcover1.jpg&amp;f=1&amp;nofb=1&amp;ipt=9f320674b3793160106047f613a5b33b02908270cc8cdfb6eb718b16d62101ca&amp;ipo=images" alt="a black and white cat" class="maxwell" id="cat" />
     <p>here's a cat! his name is maxwell and he likes to dance.<br>...<br>if you're here you're probably aware of that fact already (it's a big meme).<br>if you hover over maxwell with your mouse or gently touch him with your finger or really just interact with him in any way he'll become more pink.<br><br><br>
       <button onclick="yoy()">CLICK TO OBTAIN YIPPEE</button>
@@ -293,17 +311,19 @@ var play = false;
       <p id="convert"></p>
       <p id="buyPo"></p>
       <p id="buySo"></p>
+      <img src="/super-epic-webpage.github.io/cat-is-breaking-containment.jpg" alt="a grey cat with their arm hanging out of an m.s. paint window, seemingly breaking reality. the m.s. paint window is tinted pink but in some areas it is not. the image is also captioned" class="eepy">
+      <p>the cat is breaking containment!!</p>
       <h4>some really cool music:</h4>
       <audio loop id="chillwav" preload="none">
         <source src="/super-epic-webpage.github.io/chill.wav" type="audio/wav">your browser does not support the audio element
       </audio>
       <img src="https://art.pixilart.com/sr26345974c79aws3.png" type="button" id="plpa" class="plpabutton" onclick='if(play==true){document.getElementById("plpa").src="https://art.pixilart.com/sr26345974c79aws3.png";play=false;chillwav.pause()}else{if(play==false){document.getElementById("plpa").src="https://art.pixilart.com/sr2d288e4c10caws3.png";play=true;chillwav.play()}}'>
-
     </div>
-
   </mainright>
-  <aside><img src="/super-epic-webpage.github.io/cat-is-breaking-containment.jpg" alt="a grey cat with their arm hanging out of an m.s. paint window, seemingly breaking reality. the m.s. paint window is tinted pink but in some areas it is not. the image is also captioned" class="eepy">
-    <p>the cat is breaking containment!!</p>
+  <aside>
+    <h2>blinkie stash</h2>
+    <p>(they may be hidden, depending on your settings)</p>
+    <div id="blinkies"><img src="https://media.tenor.com/45BfX3osXPsAAAAC/lgbtq-lgbt.gif" class="funkyblink"><img src="https://media.tenor.com/lqgiaiFTJogAAAAC/blinkies-blinkie.gif" class="funkyblink"><img src="https://art.pixilart.com/sr2a2e775e8bdaws3.gif" class="funkyblink"><img src="https://media.tenor.com/--ZnmMUrj08AAAAC/blinkies-blinkie.gif" class="funkyblink"></div>
   </aside>
   <br>
   <br>
